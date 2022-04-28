@@ -3,7 +3,7 @@
 # License: Open source MIT
 
 cmake_minimum_required(VERSION 3.8)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -59,3 +59,5 @@ add_executable(test_Note test/test_Note.cpp)
 add_test(test_Note test_Note)
 add_executable(test_Parser test/test_Parser.cpp)
 add_test(test_Parser test_Parser)
+add_executable(test_Database test/test_Database.cpp)
+add_test(test_Database test_Database)

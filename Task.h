@@ -6,20 +6,26 @@
 #define Task_h
 
 #include <iostream>
+#include <string>
+#include "DateTime.h"
 
 class Task
 {	Task(const Task&) = delete;
 	void operator=(const Task&) = delete;
-
+//	1 We 04-20 Noon Angular
 public:
+	int taskId;
+	DateTime dateTime;
+	std::string description;
 	~Task()
 	{}
 	Task()
+	:	taskId(0)
 	{}
 	bool operator!() const
-	{	// to-do
-		return true;
+	{	return !taskId;
 	}
+	bool Do();
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
 };

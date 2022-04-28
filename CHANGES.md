@@ -11,3 +11,4 @@ cmaker: class Calendar
 cmaker: class Task
 cmaker: class Note
 cmaker: class Parser
+cmaker: class Database

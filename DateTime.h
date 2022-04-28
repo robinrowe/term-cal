@@ -6,19 +6,27 @@
 #define DateTime_h
 
 #include <iostream>
+#include <chrono>
+#include "Date.h"
+#include "Time.h"
 
 class DateTime
 {	DateTime(const DateTime&) = delete;
 	void operator=(const DateTime&) = delete;
 
 public:
+	Date date;
+	Time time;
 	~DateTime()
 	{}
 	DateTime()
 	{}
 	bool operator!() const
-	{	// to-do
-		return true;
+	{	return !date || !time;
+	}
+	int Now() const
+    {	using namespace std::chrono;
+		auto local = zoned_time{current_zone(), system_clock::now()};
 	}
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);

@@ -6,6 +6,7 @@
 #define Parser_h
 
 #include <iostream>
+#include "Task.h"
 
 class Parser
 {	Parser(const Parser&) = delete;
@@ -20,8 +21,11 @@ public:
 	{	// to-do
 		return true;
 	}
+	bool Get(Task& task);
+	bool Do(const Task& task);
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
+	std::istream& Input(Task& task);
 };
 
 inline
@@ -33,6 +37,12 @@ std::ostream& operator<<(std::ostream& os,const Parser& parser)
 inline
 std::istream& operator>>(std::istream& is,Parser& parser)
 {	return parser.Input(is);
+}
+
+
+inline
+std::istream& operator>>(Task& task,Parser& parser)
+{	return parser.Input(task);
 }
 
 #endif

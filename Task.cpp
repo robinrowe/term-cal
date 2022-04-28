@@ -14,3 +14,9 @@ istream& Task::Input(std::istream& is)
 {	// to-do
 	return is;
 }
+
+bool Task::Do()
+{
+
+	return false;
+}
