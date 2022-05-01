@@ -9,6 +9,7 @@
 #include <chrono>
 #include "Date.h"
 #include "Time.h"
+#include "Token.h"
 
 class DateTime
 {	DateTime(const DateTime&) = delete;
@@ -30,6 +31,7 @@ public:
 	}
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
+	DateTime& operator<<(Token& token);
 };
 
 inline

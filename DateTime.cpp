@@ -3,6 +3,7 @@
 // Open source MIT
 
 #include "DateTime.h"
+#include "Parser.h"
 using namespace std;
 
 ostream& DateTime::Print(ostream& os) const
@@ -13,4 +14,12 @@ ostream& DateTime::Print(ostream& os) const
 istream& DateTime::Input(std::istream& is) 
 {	// to-do
 	return is;
+}
+
+DateTime& DateTime::operator<<(Token& token)
+{	// token = "Th:04-21@0800"
+	Parser parser(token);
+	date << parser.GetToken('@');
+	time << parser.Get();
+	return *this;
 }

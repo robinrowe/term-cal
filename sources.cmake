@@ -15,3 +15,5 @@ Parser.h
 Parser.cpp
 Database.h
 Database.cpp
+Token.h
+Token.cpp

@@ -4,10 +4,12 @@
 
 #include <iostream>
 #include "../Parser.h"
+#include "../Database.h"
 using namespace std;
 
 int main(int argc,char* argv[])
 {	cout << "Testing Parser" << endl;
+	Database database;
 	Parser parser;
 	if(!parser)
 	{	cout << "Parser failed on operator!" << endl;

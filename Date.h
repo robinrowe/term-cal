@@ -11,15 +11,15 @@ class Date
 {	Date(const Date&) = delete;
 	void operator=(const Date&) = delete;
 public:
-	char century;
-	char year;
+	char hundreds_year;
+	char short_year;
 	char month;
 	char day;
 	~Date()
 	{}
 	Date()
-	:	century(0)
-	,	year(0)
+	:	hundreds_year(0)
+	,	short_year(0)
 	,	month(0)
 	,	day(0)
 	{}
@@ -32,6 +32,14 @@ public:
 		y -= m < 3;  
 		return ( y + y / 4 - y / 100 + y / 400 + t[m - 1] + d) % 7;  
 	}
+	const char* DayOfWeek(unsigned i) const
+	{	const char* dow[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+		if(7 <= i )
+		{	return "??";
+		}
+		return dow[i];
+	}
+	Date& operator<<(const char* text);
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
 };

@@ -5,34 +5,23 @@
 #include "Parser.h"
 using namespace std;
 
-/* ## Commands
-
-	$ term-cal
-	> add DATE TIME EVENT...
-	> cal
-	> drop #
-	> ls <wildcards>
-	> note #
-*/
-
-const char* commands[] = { "add","cal","drop","ls","note"};
-
 ostream& Parser::Print(ostream& os) const
 {	// to-do
 	return os << "Parser";
 } 
 
 istream& Parser::Input(std::istream& is) 
-{	// to-do
+{	
 	return is;
 }
 
-bool Parser::Get(Task& task)
-{
-	return false;
-}
-
-bool Parser::Do(const Task& task)
-{
-	return false;
+Token Parser::GetToken(char delimiter)
+{	char* p = (char*) Find(delimiter);
+	if(!p)
+	{	return Token("");
+	}
+	*p = 0;
+	const char* nibble = text;
+	text = p+1;
+	return Token(nibble);
 }

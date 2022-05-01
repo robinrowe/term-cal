@@ -28,6 +28,7 @@ public:
 	bool operator!() const
 	{	return 0 > hour;
 	}
+	Time& operator<<(const char* text);
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
 };

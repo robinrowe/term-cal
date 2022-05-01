@@ -29,15 +29,15 @@ int main(int argc,char* argv[])
 	{	cout << "Cannot open " << database.GetName() << endl;
 		return cannot_open_db;
 	}
-	Parser parser;
 	Task task;
 	for(;;)
-	{	parser >> task;
+	{	cin >> task;
 		if(!task)
 		{	break;
 		}
-		task.Do(database);
-	}
+		cout << task;
+		{	break;
+	}	}
 	cout << "term-cal done!" << endl;
 	return ok;
 }
