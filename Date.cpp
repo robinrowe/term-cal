@@ -9,8 +9,10 @@
 using namespace std;
 
 ostream& Date::Print(ostream& os) const
-{	os	<< setw(2) << int(short_year) << "/"
-		<< setw(2) << int(month) << "/"
+{	os	<< setfill('0') 
+		<< DayOfWeek() << ":"
+//		<< setw(2) << int(short_year) << "-"
+		<< setw(2) << int(month) << "-"
 		<< setw(2) << int(day); 
 	return os;
 } 
@@ -31,11 +33,11 @@ Date& Date::operator<<(const char* text)
 		y = parser.GetToken(separator);
 	}
 	Token m = parser.GetToken(separator);
-	if(!m)
-	{	y = "2022";// bug
-		m = y;
-	}
 	Token d = parser.Get();
+	if(!m)
+	{	m = y;
+		y = "2022";// bug
+	}
 	const int big = atoi(y);
 	if(big >= 100)
 	{	hundreds_year = big/100;

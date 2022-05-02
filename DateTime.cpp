@@ -8,7 +8,7 @@ using namespace std;
 
 ostream& DateTime::Print(ostream& os) const
 {	// to-do
-	return os << "DateTime";
+	return os << date << "@" << time;
 } 
 
 istream& DateTime::Input(std::istream& is) 

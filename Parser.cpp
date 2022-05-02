@@ -25,3 +25,17 @@ Token Parser::GetToken(char delimiter)
 	text = p+1;
 	return Token(nibble);
 }
+
+int Parser::GetNumber(int length)
+{	int number = 0;
+	while(length)
+	{	if(!*text || !isdigit(*text))
+		{	return 0;
+		}
+		number *= 10;
+		number += *text - '0';
+		text++;
+		length--;
+	}
+	return number;
+}

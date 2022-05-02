@@ -10,13 +10,14 @@ int main(int argc,char* argv[])
 {	cout << "Testing DateTime" << endl;
 	DateTime dateTime;
 	std::string s("Th:04-21@0800");
+	cout << " Input: " << s << endl;
 	Token token(s);
 	dateTime << token;
 	if(!dateTime)
 	{	cout << "DateTime failed on operator!" << endl;
 		return 1;
 	}
-	cout << dateTime << endl;
+	cout << "Output: " << dateTime << endl;
 	cout << "DateTime Passed!" << endl;
 	return 0;
 }

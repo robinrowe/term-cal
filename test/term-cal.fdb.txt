@@ -1,0 +1,34 @@
+XX 04-15 0900: Interview Accelerator 
+XX 04-15 Noon: Angular
+XX 04-15 1330: UX Portfolio
+Mo 04-18 Noon: Angular
+Tu 04-19 1030: UX Team - Canceled
+We 04-20 0630: Web3 Homebrew 
+We 04-20 0700: Quantum 
+We 04-20 Noon: Angular
+Th 04-21 0530: MS CRM
+Th 04-21 0800: Flourishing
+Th 04-21 1000: Mindfulness
+Th 04-21 1400: LA PEC
+Fr 04-22 0630: QCF
+Fr 04-22 1000: Deal Review
+Fr 04-22 Noon: Angular
+Fr 04-22 1400: TV Interview
+XX 04-25 0630: Web3 Homebrew
+XX 04-26 0300: QCF Coding
+XX 04-26 0500: QCF Onboarding
+XX 04-27 1500: Tech Practice
+XX 04-28 0800: Flourishing
+XX 04-28 1330: ASCEND
+XX 05-02 0630: Web3 Homebrew
+XX 05-03 1030: UX Team
+XX 05-04 0700: Quantum
+XX 05-05 0800: Flourishing
+XX 05-05 1400: LA PEC
+XX 05-09 0630: Web3 Homebrew
+XX 05-10 0300: QCF Coding
+XX 05-10 0800: Web3 Staff
+XX 05-16 0630: Web3 Homebrew
+XX 05-17 1030: UX Team
+XX 05-23 0630: Web3 Homebrew
+XX 05-30 0630: Web3 Homebrew

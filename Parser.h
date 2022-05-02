@@ -28,19 +28,23 @@ public:
 	bool operator!() const
 	{	return !*text;
 	}
-//	operator const char*() const
-//	{	return text;
-//	}
 	void Set(const char* text)
 	{	this->text = text;
 	}
 	const char* Find(char c)
 	{	return strchr(text,c);
 	}
+	size_t Length() const
+	{	return strlen(text);
+	}
 	const char* Get() const
 	{	return text;
 	}
 	Token GetToken(char delimiter = ' ');
+	int GetNumber(int length);
+	int GetNumber()
+	{	return GetNumber((int) Length());
+	}
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
 };

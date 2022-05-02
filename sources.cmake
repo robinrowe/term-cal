@@ -1,3 +1,5 @@
+sources.cmake
+README.md
 CHANGES.md
 Date.h
 Date.cpp
